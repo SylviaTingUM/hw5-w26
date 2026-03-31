@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
-	document.querySelector("#volume").innerHTML = video.volume * 100;
+	document.querySelector("#volume").innerHTML = video.volume * 100 + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -56,7 +56,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("input", function() {
 	var slider = document.querySelector("#slider");
 	video.volume = slider.value / 100;
-	document.querySelector("#volume").innerHTML = slider.value;
+	document.querySelector("#volume").innerHTML = slider.value + "%";
 	console.log("The current value is " + video.volume);
 });
 
